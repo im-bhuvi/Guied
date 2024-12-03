@@ -13,7 +13,6 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.openxmlformats.schemas.spreadsheetml.x2006.main.WorkbookDocument;
 
 public class Xlread {
 	public static void main(String[] args) throws IOException {
@@ -27,11 +26,10 @@ public class Xlread {
 		Sheet sheet = w.getSheet("sheet1");
 		
 		Row row = sheet.getRow(3);
-		Cell cell = row.getCell(2);
-	
+		Cell cell = row.getCell(3);
 		
 		int cellType = cell.getCellType();
-	
+
 		
 		if (cellType==1) {
 			RichTextString value = cell.getRichStringCellValue();
